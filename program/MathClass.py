@@ -4,8 +4,8 @@ from functools import reduce
 class Math:
     """math class"""
     def themes(self):
-        requestTheme = str(input("add\nsubtruct -sub\ndivide -div\nmultiply -mult\nprobability -prob\n"))
-        return requestTheme
+        request_theme = str(input("add\nsubtruct -sub\ndivide -div\nmultiply -mult\nprobability -prob #not done\n"))
+        return request_theme
     
     def list_of_ints(self):
         str_list_of_nums = str(input("Plese enter at least two numbers separeted throw space\n")).split(" ")
@@ -21,29 +21,29 @@ class Math:
    
     
     def chooseOperation(self, theme):
-        lowerTheme = theme.lower()
+        lower_theme = theme.lower()
 
-        if lowerTheme in ["add"]:
+        if lower_theme in ["add"]:
             int_list = self.list_of_ints(self)
             answer = self.add(self, int_list)   
             return answer
 
-        if lowerTheme in ["subtruct", "-sub"]:
+        if lower_theme in ["subtruct", "-sub"]:
             int_list = self.list_of_ints(self)
             answer = self.subtruct(self, int_list)    
             return answer
         
-        if lowerTheme in ["divide", "-div"]:
+        if lower_theme in ["divide", "-div"]:
             int_list = self.list_of_ints(self)
             answer = self.divide(self, int_list)  
             return answer
         
-        if lowerTheme in ["multiply", "-mult"]:
+        if lower_theme in ["multiply", "-mult"]:
             int_list = self.list_of_ints(self)
             answer = self.multiply(self, int_list)   
             return answer
         
-        if lowerTheme in ["probability", "-prob"]:
+        if lower_theme in ["probability", "-prob"]:
             print("probability is chosen\n")
             return
         
