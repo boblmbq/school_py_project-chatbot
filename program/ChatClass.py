@@ -2,18 +2,16 @@
 import random
 import json
 from program.MathClass import Math
+from difflib import SequenceMatcher
 
 data = json.load(open("intents.json"))
 
 class Chat:
-    """chat class"""
     def greet(self):
-        """greeting""" 
         greet_input = input('Hello, do you need a help or just want to speak? \n')
         self.greet_answer(self, greet_input)
 
     def can_help(self, question = "Can i help you with something else?"):
-        """can i help function"""
         can_help = self.confirm(self, question)
         if can_help:
             return self.greet_answer(self, question)
@@ -22,7 +20,6 @@ class Chat:
         
 
     def confirm(self, custom_question):
-        """confirming"""
         confirm_input  = input(f"{custom_question}\n").lower()
         if confirm_input in ["n", "no", "nicht", "nein"]:
             return False
@@ -33,12 +30,10 @@ class Chat:
             return self.confirm(self, custom_question)
     
     def greet_answer(self, answer: str):
-        """answering on greet fnc"""
         for i in answer.split():
             if i in ['speak']:
-                #function that will ask a question on a theme like wether or how the day gone
                 user_wants =  input('well as you say, I want to ask you how do you felling\n')
-                response =  self.get_response(user_wants)
+                response =  self.get_response(self, user_wants)
                 return input(response + " how do you think about the weather")
                 
             
@@ -56,13 +51,22 @@ class Chat:
                 return self.can_help(self)
 
     def get_response(self, user_input: str):
-        """some responce from data"""
-        #need to check with which tag is the user_input most similar and take the response of the tag
         for intent in data["intents"]:
             if any(pattern in user_input.lower() for pattern in intent["patterns"]):
                 return random.choice(intent["responses"])
                 
         return "Sorry, I didn't understand that."
+    
+    def similarity_check(user_input):
+        for intent in data["intents"]:
+            for pattern in intent["patterns"]:
+                similarity = SequenceMatcher(None, user_input.lower(), pattern.lower()).ratio()
+                if similarity > 0.8:
+                    return f"Your input is similar to an existing pattern for {intent['tag']}."
+
+        default_intent = data["intents"][0]
+        default_intent["patterns"].append(user_input.lower())
+        return f"Added '{user_input}' to the default intent."
 
 
     
