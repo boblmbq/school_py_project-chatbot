@@ -32,9 +32,11 @@ class Chat:
     def greet_answer(self, answer: str):
         for i in answer.split():
             if i in ['speak']:
-                user_wants =  input('well as you say, I want to ask you how do you felling\n')
-                response =  self.get_response(self, user_wants)
-                return input(response + " how do you think about the weather")
+                user_wants =  input('Then, I want to ask you how do you feel\n')
+                similarity = self.similarity_check(user_wants)
+                print("greet answer",similarity)
+                # response =  self.get_response(self, user_wants)
+                # return input(response + " how do you think about the weather")
                 
             
             if i in ['help']:
@@ -58,15 +60,32 @@ class Chat:
         return "Sorry, I didn't understand that."
     
     def similarity_check(user_input):
+        intent_index = None
+        intent_index_pattern = {}
+
         for intent in data["intents"]:
             for pattern in intent["patterns"]:
                 similarity = SequenceMatcher(None, user_input.lower(), pattern.lower()).ratio()
-                if similarity > 0.8:
-                    return f"Your input is similar to an existing pattern for {intent['tag']}."
+                
+                if similarity >= 0.7:
+                    for index, next_intent in enumerate(data["intents"]):
+                        if next_intent["tag"] == intent["tag"]:
+                            intent_index = index
+                            intent_index_pattern = data["intents"][index]
 
-        default_intent = data["intents"][0]
-        default_intent["patterns"].append(user_input.lower())
-        return f"Added '{user_input}' to the default intent."
+        
+        if any(pattern == user_input for pattern in intent_index_pattern["patterns"]): 
+            print("there is one")
+        else:
+            data["intents"][intent_index]["patterns"].append(user_input)
+            
+            with open('intents.json', 'w', encoding='utf-8') as intents:
+                json.dump(data, intents, ensure_ascii=False, indent=2)
+            
+            
+            
 
+        
 
-    
+                     
+                     

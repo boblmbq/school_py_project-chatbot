@@ -2,13 +2,34 @@
   "intents": [
     {
       "tag": "greetings",
-      "patterns": ["hello", "hi", "hallo"],
-      "responses": ["Hello", "Hey", "What can i do for you?"]
+      "patterns": [
+        "hello",
+        "hi",
+        "hallo"
+      ],
+      "responses": [
+        "Hello",
+        "Hey",
+        "What can i do for you?"
+      ]
     },
     {
       "tag": "feel",
-      "patterns": ["i feel good, how about you", "i feel fine, how about you", "i feel good and you"],
-      "responses": ["i am also fine", "i am good", "feell not bad"]
+      "patterns": [
+        "i feel good, how about you",
+        "i feel fine, how about you",
+        "i feel good and you",
+        "i feel good",
+        "i am good",
+        "i'm good",
+        "i am fine",
+        "i feel ok"
+      ],
+      "responses": [
+        "i am also fine",
+        "i am good",
+        "feell not bad"
+      ]
     }
   ]
 }
