@@ -72,8 +72,15 @@ class Chat:
                         if next_intent["tag"] == intent["tag"]:
                             intent_index = index
                             intent_index_pattern = data["intents"][index]
+                            break
 
-        
+        if intent_index is None: 
+            tag = str(input("how would you name the tag"))
+            responses = str(input("how would you name the res"))
+                
+                
+
+
         if any(pattern == user_input for pattern in intent_index_pattern["patterns"]): 
             print("there is one")
         else:

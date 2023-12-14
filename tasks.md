@@ -14,9 +14,9 @@ check all errors while speaking with chatbot and solve them
         (1.1.2.1.1 write data array to intents.json file
       1.1.2.2 if yes then don't
 
-    1.1.3 when the similarity is less then 0.8 then create new pattern without anything 
-      1.1.3.1 ask the user to help with adding responses 
-      1.1.3.2 and a tag
+    1.1.3 when the similarity is less then 0.7 then create new pattern without anything 
+      1.1.3.1 ask the user to help with responses 
+      1.1.3.2 tags
       1.1.3.3 write it to data array
       1.1.3.4 write data array to intents.json file
 
