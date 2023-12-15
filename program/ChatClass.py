@@ -33,10 +33,9 @@ class Chat:
         for i in answer.split():
             if i in ['speak']:
                 user_wants =  input('Then, I want to ask you how do you feel\n')
-                similarity = self.similarity_check(user_wants)
-                print("greet answer",similarity)
-                # response =  self.get_response(self, user_wants)
-                # return input(response + " how do you think about the weather")
+                user_response = self.update_intent(self, user_wants)
+                response =  self.get_response(self, user_response)
+                return self.greet_answer(self, input(response))
                 
             
             if i in ['help']:
@@ -55,11 +54,11 @@ class Chat:
     def get_response(self, user_input: str):
         for intent in data["intents"]:
             if any(pattern in user_input.lower() for pattern in intent["patterns"]):
-                return random.choice(intent["responses"])
+                return f"{random.choice(intent["responses"])}\n"
                 
         return "Sorry, I didn't understand that."
     
-    def similarity_check(user_input):
+    def update_intent(self, user_input):
         intent_index = None
         intent_index_pattern = {}
 
@@ -75,19 +74,21 @@ class Chat:
                             break
 
         if intent_index is None: 
-            tag = str(input("how would you name the tag"))
-            responses = str(input("how would you name the res"))
-                
-                
+            tag = str(input("how would you name the tag\n"))
+            responses = str(input("which responses should be there\n"))
+            new_intent = {'tag': tag, 'patterns': [user_input], 'responses': responses.split(" ")}
+            data["intents"].append(new_intent)
+            self.write_to_intents(self, data)
 
-
-        if any(pattern == user_input for pattern in intent_index_pattern["patterns"]): 
-            print("there is one")
-        else:
+        if all(pattern != user_input for pattern in intent_index_pattern["patterns"]): 
             data["intents"][intent_index]["patterns"].append(user_input)
+            self.write_to_intents(self, data)
+        
+        return user_input
             
-            with open('intents.json', 'w', encoding='utf-8') as intents:
-                json.dump(data, intents, ensure_ascii=False, indent=2)
+    def write_to_intents(self, data):
+        with open('intents.json', 'w', encoding='utf-8') as intents:
+            json.dump(data, intents, ensure_ascii=False, indent=2)
             
             
             
