@@ -2,16 +2,8 @@
   "intents": [
     {
       "tag": "greetings",
-      "patterns": [
-        "hello",
-        "hi",
-        "hallo"
-      ],
-      "responses": [
-        "Hello",
-        "Hey",
-        "What can i do for you?"
-      ]
+      "patterns": ["hello", "hi", "hallo"],
+      "responses": ["Hello", "Hey", "What can i do for you?"]
     },
     {
       "tag": "feel",
@@ -23,12 +15,158 @@
         "i am good",
         "i'm good",
         "i am fine",
-        "i feel ok"
+        "i feel ok",
+        "i feel fine",
+        "i am feel fine and you?",
+        "i feel cool"
       ],
       "responses": [
         "i am also fine",
         "i am also good",
         "i am also feel not bad"
+      ]
+    },
+    {
+      "tag": "weather",
+      "patterns": [
+        "how's the weather today",
+        "tell me about the weather",
+        "weather forecast",
+        "how's the weather today?"
+      ],
+      "responses": [
+        "The weather is nice today.",
+        "It's sunny outside.",
+        "Check a weather website for the forecast."
+      ]
+    },
+    {
+      "tag": "time",
+      "patterns": ["what's the time", "tell me the time", "current time"],
+      "responses": [
+        "It's time to shine!",
+        "The time is now.",
+        "Check your device for the current time."
+      ]
+    },
+    {
+      "tag": "jokes",
+      "patterns": ["tell me a joke", "give me a joke", "joke time"],
+      "responses": [
+        "Why don't scientists trust atoms? Because they make up everything!",
+        "I told my wife she should embrace her mistakes. She gave me a hug.",
+        "What is the difference between hungry and horny? Where you stick the cucumber",
+        "What is the difference between a slice of a pizza and a dead man? The slice of a pizza cannot feed a whole familly "
+      ]
+    },
+    {
+      "tag": "movies",
+      "patterns": ["recommend a movie", "favorite movies", "movie suggestions"],
+      "responses": [
+        "I recommend watching Inception.",
+        "My favorite movie is The Shawshank Redemption.",
+        "How about trying a classic like Casablanca?"
+      ]
+    },
+    {
+      "tag": "technology",
+      "patterns": [
+        "latest technology news",
+        "tech updates",
+        "tell me about technology"
+      ],
+      "responses": [
+        "The latest in technology is artificial intelligence.",
+        "Did you hear about the new smartphone release?",
+        "Blockchain technology is revolutionizing industries."
+      ]
+    },
+    {
+      "tag": "books",
+      "patterns": ["suggest a book", "favorite books", "good reads"],
+      "responses": [
+        "I recommend reading 1984 by George Orwell.",
+        "My favorite book is To Kill a Mockingbird.",
+        "How about exploring the world of fantasy with The Hobbit?"
+      ]
+    },
+    {
+      "tag": "food",
+      "patterns": [
+        "favorite food",
+        "recommend a restaurant",
+        "what's for dinner"
+      ],
+      "responses": [
+        "I love pizza!",
+        "You should try the Italian restaurant downtown.",
+        "For dinner, how about some homemade spaghetti?"
+      ]
+    },
+    {
+      "tag": "sports",
+      "patterns": ["favorite sports", "sports news", "tell me about sports"],
+      "responses": [
+        "My favorite sport is soccer.",
+        "Did you catch the latest basketball game?",
+        "Sports bring people together and promote a healthy lifestyle."
+      ]
+    },
+    {
+      "tag": "travel",
+      "patterns": [
+        "dream vacation",
+        "travel recommendations",
+        "favorite travel destination"
+      ],
+      "responses": [
+        "My dream vacation is to visit Japan.",
+        "You should consider exploring the beaches in Thailand.",
+        "One of my favorite travel destinations is Paris."
+      ]
+    },
+    {
+      "tag": "music",
+      "patterns": [
+        "favorite music genre",
+        "recommend a song",
+        "music suggestions"
+      ],
+      "responses": [
+        "I enjoy listening to rock music.",
+        "You should check out the latest pop hits.",
+        "My favorite song is Bohemian Rhapsody by Queen."
+      ]
+    },
+    {
+      "tag": "programming",
+      "patterns": [
+        "coding tips",
+        "favorite programming language",
+        "tell me about coding"
+      ],
+      "responses": [
+        "Always comment your code for better readability.",
+        "Python is a versatile and powerful programming language.",
+        "Coding is a creative and problem-solving process."
+      ]
+    },
+    {
+      "tag": "fitness",
+      "patterns": ["workout tips", "favorite exercise", "fitness motivation"],
+      "responses": [
+        "Include both cardio and strength training in your workout routine.",
+        "My favorite exercise is jogging.",
+        "Stay consistent with your fitness routine for better results."
+      ]
+    },
+    {
+      "tag": "pets",
+      "patterns": ["favorite pets", "pet care tips", "tell me about pets"],
+      "responses": [
+        "Dogs are loyal companions and make great pets.",
+        "Make sure to provide proper nutrition for your pet.",
+        "Consider adopting a pet from a local shelter."
       ]
     }
   ]

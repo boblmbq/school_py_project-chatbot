@@ -1,41 +1,49 @@
 # task 1
-
 write fn for printing the answer
 
-# \_\_(done
+done
 
 # task 2
+1 make the response unpredictable
 
-check all errors while speaking with chatbot and solve them
+  1.1 get the response and check the similarity to all patterns
 
-# \_\_(done
+      1.1.2 when the similarity is more then 0.63 then check if we have allready the same pattern
+        1.1.2.1 if not then add the pattern there
+          1.1.2.1.1 write data array to intents.json file
+        1.1.2.2 if yes then don't
 
-(1 make the response unpredictable
+      1.1.3 when the similarity is less then 0.63 then create new pattern without anything
+        1.1.3.1 ask the user to help with responses
+        1.1.3.2 tags
+        1.1.3.3 write it to data array
+        1.1.3.4 write data array to intents.json file
 
-(1.1 get the response and check the similarity to all patterns
+      1.1.4 get response
 
-    (1.1.2 when the similarity is more then 0.7 then check if we have allready the same pattern
-      (1.1.2.1 if not then add the pattern there
-        (1.1.2.1.1 write data array to intents.json file
-      (1.1.2.2 if yes then don't
+  1.2 end
 
-    (1.1.3 when the similarity is less then 0.7 then create new pattern without anything
-      (1.1.3.1 ask the user to help with responses
-      (1.1.3.2 tags
-      (1.1.3.3 write it to data array
-      (1.1.3.4 write data array to intents.json file
+done
 
-    (1.1.4 get response
 
-(1.2 end
-# \_\_(done
-
-2 write a function that will speak all the time speak with user and answer on his question
 
 # task 3
 
-write a function for probability
+2 write a function that will speak all the time speak with user and answer on his question by recursion
+
+done
 
 # task 4
+look for ai methods
 
-write fn for own equation
+# task 5
+simplify and enchance the code as possible as I can
+
+# task 6
+write a .README file for teacher
+
+# task 7
+write a function for math functions 
+
+f(x) = ax^2 + bx + c
+f(x) = a^x
