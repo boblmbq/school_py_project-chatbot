@@ -2,8 +2,16 @@
   "intents": [
     {
       "tag": "greetings",
-      "patterns": ["hello", "hi", "hallo"],
-      "responses": ["Hello", "Hey", "What can i do for you?"]
+      "patterns": [
+        "hello",
+        "hi",
+        "hallo"
+      ],
+      "responses": [
+        "Hello",
+        "Hey",
+        "What can i do for you?"
+      ]
     },
     {
       "tag": "feel",
@@ -42,7 +50,11 @@
     },
     {
       "tag": "time",
-      "patterns": ["what's the time", "tell me the time", "current time"],
+      "patterns": [
+        "what's the time",
+        "tell me the time",
+        "current time"
+      ],
       "responses": [
         "It's time to shine!",
         "The time is now.",
@@ -51,7 +63,11 @@
     },
     {
       "tag": "jokes",
-      "patterns": ["tell me a joke", "give me a joke", "joke time"],
+      "patterns": [
+        "tell me a joke",
+        "give me a joke",
+        "joke time"
+      ],
       "responses": [
         "Why don't scientists trust atoms? Because they make up everything!",
         "I told my wife she should embrace her mistakes. She gave me a hug.",
@@ -61,7 +77,11 @@
     },
     {
       "tag": "movies",
-      "patterns": ["recommend a movie", "favorite movies", "movie suggestions"],
+      "patterns": [
+        "recommend a movie",
+        "favorite movies",
+        "movie suggestions"
+      ],
       "responses": [
         "I recommend watching Inception.",
         "My favorite movie is The Shawshank Redemption.",
@@ -83,7 +103,11 @@
     },
     {
       "tag": "books",
-      "patterns": ["suggest a book", "favorite books", "good reads"],
+      "patterns": [
+        "suggest a book",
+        "favorite books",
+        "good reads"
+      ],
       "responses": [
         "I recommend reading 1984 by George Orwell.",
         "My favorite book is To Kill a Mockingbird.",
@@ -105,7 +129,11 @@
     },
     {
       "tag": "sports",
-      "patterns": ["favorite sports", "sports news", "tell me about sports"],
+      "patterns": [
+        "favorite sports",
+        "sports news",
+        "tell me about sports"
+      ],
       "responses": [
         "My favorite sport is soccer.",
         "Did you catch the latest basketball game?",
@@ -153,7 +181,11 @@
     },
     {
       "tag": "fitness",
-      "patterns": ["workout tips", "favorite exercise", "fitness motivation"],
+      "patterns": [
+        "workout tips",
+        "favorite exercise",
+        "fitness motivation"
+      ],
       "responses": [
         "Include both cardio and strength training in your workout routine.",
         "My favorite exercise is jogging.",
@@ -162,7 +194,12 @@
     },
     {
       "tag": "pets",
-      "patterns": ["favorite pets", "pet care tips", "tell me about pets"],
+      "patterns": [
+        "favorite pets",
+        "pet care tips",
+        "tell me about pets",
+        "tell me a joke"
+      ],
       "responses": [
         "Dogs are loyal companions and make great pets.",
         "Make sure to provide proper nutrition for your pet.",

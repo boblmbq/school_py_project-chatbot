@@ -2,7 +2,6 @@ import operator
 from functools import reduce
 
 class Math:
-    """math class"""
     def themes(self):
         request_theme = str(input("add\nsubtruct -sub\ndivide -div\nmultiply -mult\nprobability -prob #not done\n"))
         return request_theme
@@ -44,8 +43,8 @@ class Math:
             return answer
         
         if lower_theme in ["probability", "-prob"]:
-            print("probability is chosen\n")
-            return
+            print("probability is chosen but it doesn't work yet, please try again\n")
+            self.chooseOperation()
         
         return False
     

@@ -41,7 +41,7 @@ class Chat:
                 math_answer = Math.chooseOperation(Math, theme)
 
                 if math_answer is False:
-                    print("\nyou have wrote the theme not correct, plese do it again\n")
+                    print("\nyou have wrote the theme not correct, plese try again\n")
                     self.greet_answer("help")
 
                 print(f"The answer is {math_answer}")

@@ -1,0 +1,1 @@
+Figma Strucktur - https://www.figma.com/file/luHXvcFw9leFAcSPCMEFvi/python-project?type=whiteboard&t=2lPdhaE6Fpad2Rbq-0
