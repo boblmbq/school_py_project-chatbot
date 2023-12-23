@@ -81,6 +81,9 @@ class Chat:
                 new_intent = {'tag': tag, 'patterns': [user_input], 'responses': responses.split(" ")}
                 data["intents"].append(new_intent)
                 self.write_to_intents(self, data)
+                return user_input
+            else:
+                self.speak(self, "okay, now ask me please about the weather or pets")
 
         if all(pattern != user_input for pattern in intent_index_pattern["patterns"]): 
             data["intents"][intent_index]["patterns"].append(user_input)
